@@ -1,10 +1,3 @@
----
-name: Template de Documentação
-about: Use este template para PRs relacionados à documentação.
-title: "[DOC] Título do PR"
-labels: documentation
----
-
 # Template de PR de Documentação
 
 ## Descrição
