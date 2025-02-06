@@ -1,5 +1,0 @@
-versions:
-  - name: Código
-    filename: PULL_REQUEST_TEMPLATE/codigo.md
-  - name: Documentação
-    filename: PULL_REQUEST_TEMPLATE/documentacao.md
