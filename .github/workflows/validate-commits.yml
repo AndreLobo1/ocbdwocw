@@ -1,12 +1,8 @@
 name: Validate Conventional Commits
 
 on:
-  pull_request:
-    branches:
-      - main # Altere para o nome da sua branch principal, se necessário
-  push:
-    branches:
-      - main # Altere para o nome da sua branch principal, se necessário
+  pull_request: {} # Aciona em qualquer PR, independentemente da branch
+  push: {} # Aciona em qualquer push, independentemente da branch
 
 jobs:
   validate-commits:
@@ -21,6 +17,4 @@ jobs:
       - name: Validate conventional commits
         uses: wagoid/commitlint-github-action@v5
         with:
-          configFile: .commitlintrc.json # Arquivo de configuração personalizado (opcional)
-          failOnWarnings: true # Falhar se houver avisos
-          failOnErrors: true # Falhar se houver erros
+          config: '@commitlint/config-conventional' # Configuração padrão do Conventional Commits
