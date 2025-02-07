@@ -1,0 +1,24 @@
+name: Validate Conventional Commits
+
+on:
+  pull_request:
+    branches:
+      - main # Altere para o nome da sua branch principal, se necessário
+  push:
+    branches:
+      - main # Altere para o nome da sua branch principal, se necessário
+
+jobs:
+  validate-commits:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Necessário para acessar o histórico completo dos commits
+
+      - name: Validate conventional commits
+        uses: wagoid/commitlint-github-action@v5
+        with:
+          config: '@commitlint/config-conventional' # Configuração padrão do Conventional Commits
