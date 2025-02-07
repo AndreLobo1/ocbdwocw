@@ -21,4 +21,6 @@ jobs:
       - name: Validate conventional commits
         uses: wagoid/commitlint-github-action@v5
         with:
-          config: '@commitlint/config-conventional' # Configuração padrão do Conventional Commits
+          configFile: .commitlintrc.json # Arquivo de configuração personalizado (opcional)
+          failOnWarnings: true # Falhar se houver avisos
+          failOnErrors: true # Falhar se houver erros
